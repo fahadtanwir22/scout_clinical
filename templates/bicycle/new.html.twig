@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Bicycle{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Create New Bicycle</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+       <div class="col-md-12 col-lg-12">
+            {{ include('bicycle/_form.html.twig') }}
+       </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-lg-6">
+            <a class="btn btn-primary" href="{{ path('app_bicycle_index') }}">back to list</a>
+        </div>
+    </div>
+
+    <style type="text/css">
+        .container{
+            padding: 50px;
+        }
+        .container .row:first-child{
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container .row:last-child{
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        form{
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #bicycle > div{
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0px;
+        }
+        form .btn{
+            background-color: #0a58ca;
+            color: #fff;
+            border-color: #0a53be;
+        }
+        #bicycle > div input{
+            padding: 5px;
+            border: 1px solid #cccc;
+            outline: none;
+            margin-top: 2px;
+        }
+    </style>
+
+{% endblock %}
+
+
+

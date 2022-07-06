@@ -1,0 +1,54 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+
+<style type="text/css">
+.container{
+    padding: 50px;
+}
+.container .row:first-child{
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .row:last-child{
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .row .col-md-6:last-child{
+    text-align: right;
+}
+form{
+   width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+form .btn{
+            background-color: #0a58ca;
+            color: #fff;
+            border-color: #0a53be;
+}
+form .btn-del{
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+#bicycle > div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+#bicycle > div input{
+    padding: 5px;
+    border: 1px solid #cccc;
+    outline: none;
+    margin-top: 2px;
+}
+</style>

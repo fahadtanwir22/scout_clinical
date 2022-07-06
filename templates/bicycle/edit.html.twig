@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Bicycle{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Edit Bicycle</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+       <div class="col-md-12 col-lg-12">
+            {{ include('bicycle/_form.html.twig', {'button_label': 'Update'}) }}
+       </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-lg-6">
+            <a class="btn btn-primary" href="{{ path('app_bicycle_index') }}">back to list</a>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            {{ include('bicycle/_delete_form.html.twig') }}
+        </div>
+    </div>
+
+
+{% endblock %}
